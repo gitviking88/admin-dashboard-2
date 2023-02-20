@@ -51,7 +51,7 @@ table {
 body {
     display: grid;
     grid-template-columns: 300px 85%;
-    grid-template-rows: 15% 85%;
+    grid-template-rows: 250px 85%;
     height: 100vh;
     width: 100vw;
     font-family: Arial, Helvetica, sans-serif;
@@ -80,7 +80,9 @@ body {
     width: 100%;
     justify-content: start;
     align-items: center;
-    font-size: 24px;
+    font-size: 28px;
+    margin-bottom: 20px;
+    font-weight: 700;
 }
 
 
@@ -106,12 +108,15 @@ body {
     width: 100%;
     justify-content: start;
     align-items: center;
-    padding-top: 10px;
-    font-size: 16px;
+    padding-top: 20px;
+    font-size: 20px;
+    margin-left: 10px;
+    font-weight: 600;
 }
 
 .small-icon>a>i>svg {
-    height: 20px;
+    height: 30px;
+    margin-right: 14px;
 }
 
 #seven {
@@ -121,22 +126,120 @@ body {
 /* header start */
 .header {
     grid-area: 1 / 2 / 2 / 3;
-    background-color: red;
+    background-color: white;
     display: grid;
-    height: 200px;
-    grid-template-columns: 1fr;
+    height: 300px;
+    grid-template-columns: 100%;
     grid-template-rows: 30% 70%;
 }
 
 .headertop {
     display: flex;
+    align-items: center;
+    width: 100%;
+    padding-top: 50px;
+    padding-left: 30px;
+}
+
+.searchsymbol {
+    height: 30px;
+    opacity: 80%;
+}
+
+.searchbar {
+    display: flex;
+    flex: 1;
+}
+
+.searchbar>button {
+    border: none;
+    background-color: white;
+}
+
+.searchbar>input {
+    border-radius: 20px;
+    border: none;
+    background-color:rgb(226,232,240);
+    margin-left: 10px;
+    padding-left: 5px;
+    flex: 1;
+    max-width: 600px;
+}
+
+.notifications {
+    height: 30px;
+    border-radius: 10px;
+    border: 0;
+    background-color: white;
+    margin-left: 100px;
+}
+
+.bellsymbol {
+    height: 30px;
+    background-color: white;
+}
+
+.topprofilepicture>img {
+    height: 60px;
+    border-radius: 50%;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.topusername {
+    font-size: 20px;
+    font-weight: 600;
+    margin-right: 180px;
 }
 
 
 .headerbottom {
     display: flex;
+    justify-content: start;
+    align-items: center;
+    height: 100px;
+    padding-top: 30px;
+
 }
 
+.mainprofilepicture>img {
+    height: 90px;
+    border-radius: 50%;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.mainprofiledesc {
+    flex: 1;
+}
+
+.mainprofiledesc>p {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.bottomusername {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.headerbuttons {
+    margin-right: 100px;
+}
+
+.headerbuttons>button {
+    border: none;
+    background-color:  rgb(25,147,211);
+    margin-left: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 20px;
+    color: white;
+    font-size: 16px;
+}
 
 /* middle start */
 .middle {
@@ -152,7 +255,7 @@ body {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 50px 1fr 1fr 1fr;
     grid-area: 1 / 1 / 2 / 2;
-    gap: 15px;
+    gap: 30px;
     padding-left: 15px;
     padding-right: 15px;
     width: 1fr;
@@ -164,6 +267,16 @@ body {
     grid-row-start: 1;
     grid-row-end: 2;
     width: 100%;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 100%;
+    align-items: end;
+}
+
+.projecthead>h2 {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: -15px;
 }
 
 .card {
@@ -174,6 +287,37 @@ body {
     border: solid black;
     background-color: rgb(255,255,255);
     border-left: 10px solid rgb(240,180,41);
+    padding: 30px ;
+    border-top: none;
+    border-right: none;
+    border-bottom: none;
+}
+
+.carddesc {
+    width: 80%;
+    height: 80%;
+    overflow: auto;
+}
+
+.carddesc>h3 {
+    font-weight: 600;
+    font-size: 18px;
+    padding-bottom: 8px;
+}
+
+.carddesc>p {
+    opacity: 70%;
+    font-size: 16x;
+}
+
+.cardsymbols {
+    float: right;
+    opacity: 70%;
+}
+
+.cardsymbols>svg {
+    height: 30px;
+    margin: 0 10px 0 10px;
 }
 
 .right-sidebar {
