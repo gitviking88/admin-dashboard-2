@@ -1,0 +1,195 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* Start of my code  */
+
+body {
+    display: grid;
+    grid-template-columns: 300px 85%;
+    grid-template-rows: 15% 85%;
+    height: 100vh;
+    width: 100vw;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* sidebar start */
+.sidebar {
+    background-color: rgb(25,147,211);
+    height: 100%;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+}
+
+.navbar {
+    height: 100%;
+    padding-left: 15px;
+    padding-top: 20px;
+}
+
+
+.big-icon {
+    display: flex;
+    width: 100%;
+    justify-content: start;
+    align-items: center;
+    font-size: 24px;
+}
+
+
+.navbar>li>a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    fill: white;
+    color: white;
+    text-decoration: none;
+}
+
+.navbar>li>a>i {
+    margin-right: 10px;
+}
+
+.dashboardsymbol {
+    height: 50px;
+}
+
+.small-icon {
+    display: flex;
+    width: 100%;
+    justify-content: start;
+    align-items: center;
+    padding-top: 10px;
+    font-size: 16px;
+}
+
+.small-icon>a>i>svg {
+    height: 20px;
+}
+
+#seven {
+    margin-bottom: 40px;
+}
+
+/* header start */
+.header {
+    grid-area: 1 / 2 / 2 / 3;
+    background-color: red;
+    display: grid;
+    height: 200px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 30% 70%;
+}
+
+.headertop {
+    display: flex;
+}
+
+
+.headerbottom {
+    display: flex;
+}
+
+
+/* middle start */
+.middle {
+    grid-area: 2 / 2 / 3 / 3;
+    background-color: rgb(226,232,240);
+    display: grid;
+    grid-template-columns: 70% 30%;
+    grid-template-rows: 100%;
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 50px 1fr 1fr 1fr;
+    grid-area: 1 / 1 / 2 / 2;
+    gap: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 1fr;
+    height: 1fr;
+}
+.projecthead {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    width: 100%;
+}
+
+.card {
+    height: 1fr;
+    width: 1fr;
+    display: block;
+    border-radius: 10px;
+    border: solid black;
+    background-color: rgb(255,255,255);
+    border-left: 10px solid rgb(240,180,41);
+}
+
+.right-sidebar {
+    display: grid;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px 1fr 50px 1fr;
+    gap: 15px;
+}
+
+.announcements {
+    grid-row: 2 / 3;
+}
+
+.trending {
+    grid-row: 4 / 5;
+}
+
